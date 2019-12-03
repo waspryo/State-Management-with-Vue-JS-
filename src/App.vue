@@ -1,16 +1,22 @@
 <template>
   <div id="app">
     <Navbar />
+    <TaskForm />
+    <TaskList/>
   </div>
 </template>
 
 <script>
-import Navbar from "@/components/Navbar.vue";
+import Navbar from "@/components/Navbar";
+import TaskForm from "@/components/TaskFrom";
+import TaskList from "@/components/TaskList";
 
 export default {
   name: "app",
   components: {
-    Navbar
+    Navbar,
+    TaskForm,
+    TaskList
   }
 };
 </script>
