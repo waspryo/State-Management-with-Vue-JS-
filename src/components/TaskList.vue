@@ -5,7 +5,7 @@
     </label>
     <ul>
       <li v-for="task in tasks" :key="task.id">
-          <p :class="(task.done) ? 'done' : ''">{{task.task}}</p>
+          <p :class="(task.done) ? 'done' : ''" @click="$store.commit('toggleDone', task.id)">{{task.task}}</p>
           <div class="remove" @click="$store.commit('removeTask', task.id)">x</div>
       </li>
     </ul>

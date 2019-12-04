@@ -35,6 +35,16 @@ export default new Vuex.Store({
     },
     removeTask (state, id) {
       state.tasks = state.tasks.filter(task => task.id != id);
+    },
+    toggleDone (state, id) {
+      state.tasks = state.tasks.map(task => {
+        if (task.id === id) {
+          task.done = !task.done;
+          return task;
+        } else {
+          return task;
+        }
+      })
     }
   }
 })
