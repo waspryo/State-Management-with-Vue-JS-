@@ -26,5 +26,15 @@ export default new Vuex.Store({
   getters: {
   },
   mutations: {
-  },
+    newTask (state, task) {
+      state.tasks.push({
+      id : state.tasks.length,
+      task,
+      done: false
+      })
+    },
+    removeTask (state, id) {
+      state.tasks = state.tasks.filter(task => task.id != id);
+    }
+  }
 })
