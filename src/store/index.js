@@ -38,12 +38,8 @@ export default new Vuex.Store({
     },
     toggleDone (state, id) {
       state.tasks = state.tasks.map(task => {
-        if (task.id === id) {
-          task.done = !task.done;
+        if (task.id === id) task.done = !task.done;
           return task;
-        } else {
-          return task;
-        }
       })
     }
   }
